@@ -1,5 +1,7 @@
 # 코로나봇 (COVID-19 Discord Bot) By All PGS / Open Source By Team Koreal - KRChungwol
 
+[![Run on Repl.it](https://repl.it/badge/github/kms0219kms/covid-discord-bot)](https://repl.it/github/kms0219kms/covid-discord-bot)
+
 ## 사용법
 > 1. clone 후 yarn(npm install) 을 통해 Dependencies 를 설치해주세요.
 > 2. 폴더 내부에 config.json 을 생성하고 "token" 항목을 만들고 자신만의 디스코드봇 token을 삽입하세요.
