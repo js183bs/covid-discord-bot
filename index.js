@@ -3,6 +3,38 @@ const request = require('request');
 const client = new Discord.Client();
 const fs = require('fs');
 const path = require('path');
+const express = require('express')
+const db = require('quick.db')
+const dotenv = require('dotenv')
+
+dotenv.config({
+    path: './.env'
+});
+
+const http = require('http');
+const url = require('url');
+http.createServer((request, response) => {
+  const path = url.parse(request.url, true).pathname; // url에서 path 추출
+  if (request.method === 'GET') { // GET 요청이면
+    if (path === '/') { // 주소가 /이면
+      response.writeHead(200,{'Content-Type':'text/html'});
+      fs.readFile(__dirname + '/public/index.html', (err, data) => {
+        if (err) {
+          return console.error(err);
+        }
+        response.end(data, 'utf-8');
+      });
+    } else { // 매칭되는 주소가 없으면
+      response.writeHead(404,{'Content-Type':'text/html'});
+      fs.readFile(__dirname + '/public/404.html', (err, data) => {
+        if (err) {
+          return console.error(err);
+        }
+        response.end(data, 'utf-8');
+    })
+  }
+}
+}).listen(8080);
 
 client.on('ready', () => {
   console.log(`코로나봇 준비 완료!`);
