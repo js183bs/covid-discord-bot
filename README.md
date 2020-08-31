@@ -1,4 +1,4 @@
-# 코로나봇 (COVID-19 Discord Bot) By Team Koreal - KRChungwol (Republic Of Korea)
+# 코로나봇 (COVID-19 Discord Bot) By All PGS / Open Source By Team Koreal - KRChungwol
 
 ## 사용법
 > 1. clone 후 yarn(npm install) 을 통해 Dependencies 를 설치해주세요.
@@ -11,10 +11,10 @@
 > API 또한 오픈소스로 운영되니 참고 바랍니다.
 
 ## 사용방법 소개
-https://chungwoldevelop.tistory.com/54  - 제작자가 직접 포스팅하였습니다.
+https://chungwoldevelop.tistory.com/54  - 오픈소스 제작자가 직접 포스팅하였습니다.
 
 ## 디스코드 봇 추가
-https://discord.com/oauth2/authorize?client_id=714354420154105886&permissions=18432&scope=bot
+https://discord.com/oauth2/authorize?client_id=CID&permissions=18432&scope=bot
 
 ## 사진 출처
 
