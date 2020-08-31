@@ -16,9 +16,10 @@
 https://chungwoldevelop.tistory.com/54  - 오픈소스 제작자가 직접 포스팅하였습니다.
 
 ## 디스코드 봇 추가
-https://discord.com/oauth2/authorize?client_id=CID&permissions=18432&scope=bot
+https://discord.com/oauth2/authorize?client_id=749878523656798319&permissions=18432&scope=bot
 
 ## 사진 출처
 
-디스코드 봇 아이콘 : http://www.akomnews.com/bbs/board.php?bo_table=news&wr_id=39108 (한의신문 민보영 기자)
+디스코드 봇 아이콘 : http://www.akomnews.com/bbs/board.php?bo_table=news&wr_id=39262
+
 코로나19 대시보드 하단 정부 아이콘 : http://ncov.mohw.go.kr/static/image/header/shim.png (보건복지부)
