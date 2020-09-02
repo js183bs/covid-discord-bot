@@ -13,32 +13,31 @@ dotenv.config({
 
 client.on('ready', () => {
   console.log(`코로나봇 준비 완료!`);
-  client.user.setActivity('도움말: !help 또는 !도움말 | COVID-19 BOT', { type: 'WATCHING' })
+  client.user.setActivity('도움말: s/help 또는 s/도움말 | COVID-19 BOT', { type: 'WATCHING' })
 });
 
 client.on('message', msg => {
   if(msg.author.bot) return;
   if(msg.channel.type == "dm") return;
   if(!msg.channel.name == "디스코드-봇-만드는-곳") return;
-  if(!msg.content.startsWith("!")) return;
+  if(!msg.content.startsWith("s/")) return;
 
-  let command = msg.content.split("!");
+  let command = msg.content.split("s/");
   command = command[1].split(" ");
 
-  if(msg.content == "!") {
-    msg.reply("사용법 : ![명령어] \n더 많은 설명을 찾고싶다면 !help 또는 !도움말 을 쳐주세요!")
+  if(msg.content == "s/") {
+    msg.reply("사용법 : ![명령어] \n더 많은 설명을 찾고싶다면 s/help 또는 s/도움말 을 쳐주세요!")
   }
 
-  if(msg.content == "!도움말" || msg.content == "!help") {
+  if(msg.content == "s/도움말" || msg.content == "s/help") {
     let HelpEmbed = new Discord.MessageEmbed()
       .setColor('#00ff9d')
       .setTitle('코로나봇 사용법')
-      .setAuthor('Created By Team Koreal KRChungwol')
       .addFields(
-        { name: '!도움말', value: '코로나봇 도움말을 가져옵니다.'},
-        { name: '!코로나', value: '국내 총 코로나19 현황을 가져옵니다.'},
-        { name: '!지역코로나', value: '지역별 총 코로나19 현황을 가져옵니다.'},
-        { name: '!지역코로나 [지역이름]', value: '인자로 전달한 지역이름의 코로나19 현황을 가져옵니다.\n지역이름은 광역시(서울, 인천, 제주 등...)를 제외하고 도 단위입니다.'}
+        { name: 's/도움말', value: '코로나봇 도움말을 가져옵니다.'},
+        { name: 's/코로나', value: '국내 총 코로나19 현황을 가져옵니다.'},
+        { name: 's/지역코로나', value: '지역별 총 코로나19 현황을 가져옵니다.'},
+        { name: 's/지역코로나 [지역이름]', value: '인자로 전달한 지역이름의 코로나19 현황을 가져옵니다.\n지역이름은 광역시(서울, 인천, 제주 등...)를 제외하고 도 단위입니다.'}
       )
     msg.channel.send(HelpEmbed)
   }
